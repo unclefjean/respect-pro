@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Respect PRO",
+    "slug": "respect-pro",
+    "version": "14.10.2",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "respect-pro",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.respectpro",
+      "versionCode": 2,
+      "permissions": []
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "07c434de-2c2a-454f-a7d2-399d05af1444"
+      }
+    }
+  }
+}

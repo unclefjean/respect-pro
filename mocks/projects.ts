@@ -1,0 +1,80 @@
+import { Project } from '@/types/project';
+import { usdToKzt } from '@/utils/currency';
+
+export const mockProjects: Project[] = [
+  {
+    id: '1',
+    title: 'Редизайн сайта ТехКорп',
+    description: 'Полное обновление корпоративного сайта ТехКорп с учетом новых брендинговых рекомендаций.',
+    clientId: '2',
+    clientName: 'ТехКорп Инк.',
+    status: 'in_progress',
+    deadline: '2023-11-30T23:59:59Z',
+    startDate: '2023-09-15T09:00:00Z',
+    budget: usdToKzt(45000), // 45,000 USD в тенге
+    assignedTo: ['1', '3'],
+    progress: 65,
+    tags: ['веб', 'дизайн', 'брендинг'],
+    priority: 'high',
+  },
+  {
+    id: '2',
+    title: 'Летняя кампания Глобал Брендс',
+    description: 'Мультиканальная маркетинговая кампания для летней линейки продуктов Глобал Брендс.',
+    clientId: '4',
+    clientName: 'Глобал Брендс ТОО',
+    status: 'planning',
+    deadline: '2023-12-15T23:59:59Z',
+    startDate: '2023-10-01T09:00:00Z',
+    budget: usdToKzt(12000), // 120,000 USD в тенге
+    assignedTo: ['1', '3', '5'],
+    progress: 25,
+    tags: ['кампания', 'мультиканальный', 'сезонный'],
+    priority: 'urgent',
+  },
+  {
+    id: '3',
+    title: 'Запуск продукта ТехКорп',
+    description: 'Маркетинговая стратегия и реализация запуска нового флагманского продукта ТехКорп.',
+    clientId: '2',
+    clientName: 'ТехКорп Инк.',
+    status: 'review',
+    deadline: '2023-11-10T23:59:59Z',
+    startDate: '2023-08-20T09:00:00Z',
+    budget: usdToKzt(8500), // 85,000 USD в тенге
+    assignedTo: ['3', '5'],
+    progress: 90,
+    tags: ['запуск продукта', 'стратегия', 'маркетинг'],
+    priority: 'high',
+  },
+  {
+    id: '4',
+    title: 'Редизайн логотипа Глобал Брендс',
+    description: 'Обновление корпоративной идентичности Глобал Брендс с современным дизайном логотипа.',
+    clientId: '4',
+    clientName: 'Глобал Брендс ТОО',
+    status: 'completed',
+    deadline: '2023-09-30T23:59:59Z',
+    startDate: '2023-08-01T09:00:00Z',
+    budget: usdToKzt(25000), // 25,000 USD в тенге
+    assignedTo: ['1'],
+    progress: 100,
+    tags: ['логотип', 'брендинг', 'дизайн'],
+    priority: 'medium',
+  },
+  {
+    id: '5',
+    title: 'Стратегия социальных сетей ТехКорп',
+    description: 'Разработка комплексной стратегии социальных сетей для B2B аудитории ТехКорп.',
+    clientId: '2',
+    clientName: 'ТехКорп Инк.',
+    status: 'on_hold',
+    deadline: '2024-01-15T23:59:59Z',
+    startDate: '2023-10-15T09:00:00Z',
+    budget: usdToKzt(3000), // 30,000 USD в тенге
+    assignedTo: ['3'],
+    progress: 40,
+    tags: ['социальные сети', 'стратегия', 'B2B'],
+    priority: 'low',
+  },
+];

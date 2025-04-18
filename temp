@@ -1,0 +1,59 @@
+import { User } from '@/types/user';
+
+// Используем URL изображений вместо локальных файлов
+export const mockUsers: User[] = [
+  {
+    id: '1',
+    email: 'elzataitmukhamedov@gmail.com',
+    name: 'Эльзат Айтмухамедов',
+    role: 'Сотрудник',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    phone: '+7 (701) 125-4287',
+    position: 'IT инженер',
+    createdAt: '2023-01-15T08:00:00Z',
+  },
+  {
+    id: '2',
+    email: 'nasiba@gmail.com',
+    name: 'Насиба Пашанова',
+    role: 'Клиент',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    phone: '+7 (708) 399-4740',
+    company: 'Г. Кентау, Компания TechCorp Inc.',
+    createdAt: '2023-02-20T10:30:00Z',
+  },
+  {
+    id: '3',
+    email: 'maksat@gmail.com',
+    name: 'Максат Абдухаликов',
+    role: 'Сотрудник',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    phone: '+7 (775) 814-2222',
+    position: 'Менеджер по продажам',
+    createdAt: '2023-01-10T09:15:00Z',
+  },
+  {
+    id: '4',
+    email: 'leila@gmail.com',
+    name: 'Лейла Тенлесбекова',
+    role: 'Клиент',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    phone: '+7 (747) 870-0432',
+    company: 'Г. Кентау, Компания Mega Planet Ltd.',
+    createdAt: '2023-03-05T14:20:00Z',
+  },
+  {
+    id: '5',
+    email: 'daulet@gmail.com',
+    name: 'Даулет Абулкасимов',
+    role: 'Директор',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    phone: '+7 (771) 258-3764',
+    position: 'CEO Директор',
+    createdAt: '2023-01-01T00:00:00Z',
+  },
+];
+
+export const getUser = (email: string, password: string): User | null => {
+  return mockUsers.find(user => user.email === email) || null;
+};

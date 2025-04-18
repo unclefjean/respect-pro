@@ -1,0 +1,81 @@
+import { Campaign } from '@/types/campaign';
+import { usdToKzt } from '@/utils/currency';
+
+export const mockCampaigns: Campaign[] = [
+  {
+    id: '1',
+    title: 'Цифровая кампания ТехКорп Q4',
+    description: "Комплексная цифровая кампания для увеличения продаж ТехКорп в 4-м квартале.",
+    type: 'digital',
+    status: 'active',
+    clientId: '2',
+    clientName: 'ТехКорп Инк.',
+    startDate: '2025-10-01T00:00:00Z',
+    endDate: '2025-12-31T23:59:59Z',
+    budget: usdToKzt(7500), // 75,000 USD в тенге
+    reach: 1500000,
+    engagement: 120000,
+    conversion: 15000,
+    platforms: ['google', 'facebook', 'linkedin', 'twitter'],
+    assets: ['баннерная реклама', 'видео контент', 'целевые страницы'],
+  },
+  {
+    id: '2',
+    title: 'Летняя коллекция Глобал Брендс',
+    description: "Мультиканальная кампания для летней линейки продуктов Глобал Брендс.",
+    type: 'mixed',
+    status: 'scheduled',
+    clientId: '4',
+    clientName: 'Глобал Брендс ТОО',
+    startDate: '2025-04-01T00:00:00Z',
+    endDate: '2025-06-30T23:59:59Z',
+    budget: usdToKzt(25000), // 250,000 USD в тенге
+    platforms: ['instagram', 'facebook', 'наружная реклама', 'печатная реклама'],
+    assets: ['фотосессия', 'видео реклама', 'билборды', 'журнальные развороты'],
+  },
+  {
+    id: '3',
+    title: 'Запуск продукта ТехКорп',
+    description: "Кампания по запуску нового флагманского продукта ТехКорп.",
+    type: 'mixed',
+    status: 'draft',
+    clientId: '2',
+    clientName: 'ТехКорп Инк.',
+    startDate: '2025-11-15T00:00:00Z',
+    endDate: '2025-01-15T23:59:59Z',
+    budget: usdToKzt(18000), // 180,000 USD в тенге
+    platforms: ['тв', 'цифровые медиа', 'социальные сети', 'pr'],
+    assets: ['тв-ролики', 'цифровая реклама', 'пресс-релизы', 'наборы для инфлюенсеров'],
+  },
+  {
+    id: '4',
+    title: 'Праздничная акция Глобал Брендс',
+    description: 'Праздничная тематическая кампания для розничных точек Глобал Брендс.',
+    type: 'mixed',
+    status: 'completed',
+    clientId: '4',
+    clientName: 'Глобал Брендс ТОО',
+    startDate: '2025-11-01T00:00:00Z',
+    endDate: '2025-12-31T23:59:59Z',
+    budget: usdToKzt(12000), // 120,000 USD в тенге
+    reach: 2000000,
+    engagement: 350000,
+    conversion: 45000,
+    platforms: ['в магазине', 'социальные сети', 'цифровые медиа', 'email'],
+    assets: ['оформление магазинов', 'посты в соцсетях', 'email шаблоны'],
+  },
+  {
+    id: '5',
+    title: 'Выставка ТехКорп',
+    description: 'Комплексное присутствие на отраслевой выставке.',
+    type: 'mixed',
+    status: 'paused',
+    clientId: '2',
+    clientName: 'ТехКорп Инк.',
+    startDate: '2025-09-01T00:00:00Z',
+    endDate: '2025-09-05T23:59:59Z',
+    budget: usdToKzt(8500), // 85,000 USD в тенге
+    platforms: ['мероприятие', 'печатная продукция', 'цифровые медиа'],
+    assets: ['дизайн стенда', 'брошюры', 'промо-материалы'],
+  },
+];
